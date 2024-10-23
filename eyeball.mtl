@@ -10,7 +10,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 0
-map_Kd https://drive.google.com/uc?export=download&id=1Zr9glsx2oC691QIVG9OAVBRo2pMG6tjC
+map_Kd Eye_D.jpg
 
 newmtl Eye_Iris
 Ns 17.647059
@@ -21,10 +21,10 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd https://drive.google.com/uc?export=download&id=1Zr9glsx2oC691QIVG9OAVBRo2pMG6tjC
-map_Bump https://drive.google.com/uc?export=download&id=1bMynLPfcBrM-7ZMtMe5MACyjCcMXw0z8
-map_Ke https://drive.google.com/uc?export=download&id=1Zr9glsx2oC691QIVG9OAVBRo2pMG6tjC
-map_Ks https://drive.google.com/uc?export=download&id=1Zr9glsx2oC691QIVG9OAVBRo2pMG6tjC
+map_Kd Eye_D.jpg
+map_Bump Eye_N.jpg
+map_Ke Eye_D.jpg
+map_Ks Eye_D.jpg
 
 newmtl Eye_Tranz.001
 Ns 705.413990
@@ -35,9 +35,9 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 0.170064
 illum 2
-map_Kd https://drive.google.com/uc?export=download&id=1Zr9glsx2oC691QIVG9OAVBRo2pMG6tjC
-map_Bump https://drive.google.com/uc?export=download&id=1bMynLPfcBrM-7ZMtMe5MACyjCcMXw0z8
-refl https://drive.google.com/uc?export=download&id=1d9SGd00GADSUzd8bj8iRqZhXOJ4A54Az
+map_Kd Eye_D.jpg
+map_Bump Eye_N.jpg
+refl REF 1.jpg
 
 newmtl Eye_white
 Ns 550.955445
@@ -48,8 +48,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd https://drive.google.com/uc?export=download&id=1Zr9glsx2oC691QIVG9OAVBRo2pMG6tjC
-map_Bump https://drive.google.com/uc?export=download&id=1bMynLPfcBrM-7ZMtMe5MACyjCcMXw0z8
-map_Ks https://drive.google.com/uc?export=download&id=1Zr9glsx2oC691QIVG9OAVBRo2pMG6tjC
-refl https://drive.google.com/uc?export=download&id=1d9SGd00GADSUzd8bj8iRqZhXOJ4A54Az
-
+map_Kd Eye_D.jpg
+map_Bump Eye_N.jpg
+map_Ks Eye_D.jpg
+refl REF 1.jpg
