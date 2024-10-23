@@ -44,9 +44,9 @@
     directionalLight.position.set(1, 1, 1).normalize();
     scene.add(directionalLight);
 
-    // Desactivar temporalmente OrbitControls
-    // var controls = new THREE.OrbitControls(camera, renderer.domElement);
-    // controls.update();
+    // Activar OrbitControls
+    var controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.update();
 
     // Cargar el archivo MTL y OBJ
     var mtlLoader = new THREE.MTLLoader();
@@ -58,7 +58,7 @@
       objLoader.setMaterials(materials);
       objLoader.load('eyeball.obj', function (object) {
         object.position.set(0, 0, 0);  // Centrar el modelo
-        object.scale.set(2, 2, 2);  // Ajustar la escala del modelo (1000% más grande)
+        object.scale.set(3, 3, 3);  // Ajustar la escala del modelo (1000% más grande)
         scene.add(object);
       });
     });
@@ -66,6 +66,7 @@
     // Función de animación
     function animate() {
       requestAnimationFrame(animate);
+      controls.update();  // Actualizar los controles interactivos
       renderer.render(scene, camera);  // Renderiza la escena
     }
     animate();
