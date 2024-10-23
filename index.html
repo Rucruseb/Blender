@@ -170,7 +170,8 @@
 
     // Crear el renderizador
     var renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    var container = document.getElementById('product-viewer');
+    renderer.setSize(container.clientWidth, container.clientHeight);  // Ajustar al tamaño del contenedor
     document.getElementById('product-viewer').appendChild(renderer.domElement); // Insertar en el div del visor
 
     // Añadir luces
