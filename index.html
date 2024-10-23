@@ -12,12 +12,15 @@
 <body>
   <div id="container"></div>
 
+  <!-- Three.js Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- OrbitControls -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+  <!-- OBJ and MTL Loaders -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/MTLLoader.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/controls/OrbitControls.js"></script>
-
 
   <script>
     // Crear la escena 3D
@@ -26,11 +29,6 @@
     // Crear la cámara
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 10;
-
-
-    var controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.update();
-
 
     // Crear el renderizador
     var renderer = new THREE.WebGLRenderer();
@@ -45,6 +43,10 @@
     directionalLight.position.set(1, 1, 1).normalize();
     scene.add(directionalLight);
 
+    // Añadir OrbitControls para interactuar con el modelo
+    var controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.update();
+
     // Cargar el archivo MTL y OBJ
     var mtlLoader = new THREE.MTLLoader();
     mtlLoader.load('eyeball.mtl', function (materials) {
@@ -55,19 +57,18 @@
       objLoader.setMaterials(materials);
       objLoader.load('eyeball.obj', function (object) {
         object.position.set(0, 0, 0);  // Centrar el modelo
-      object.scale.set(2, 2, 2);  // Aumenta la escala (ajusta según sea necesario)
+        object.scale.set(10, 10, 10);  // Ajustar la escala del modelo (1000% más grande)
         scene.add(object);
       });
     });
 
     // Función de animación
-function animate() {
-  requestAnimationFrame(animate);
-  controls.update();  // Actualiza los controles para interactuar con el modelo
-  renderer.render(scene, camera);  // Renderiza la escena
-}
-animate();
-
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();  // Actualiza los controles para interactuar con el modelo
+      renderer.render(scene, camera);  // Renderiza la escena
+    }
+    animate();
   </script>
 </body>
 </html>
