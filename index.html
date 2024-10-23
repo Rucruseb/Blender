@@ -28,7 +28,8 @@
 
     // Crear la cámara
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 10;
+    camera.position.set(0, 5, 20);  // Ajustar la posición de la cámara
+    camera.lookAt(scene.position);  // Asegurar que la cámara mire al objeto
 
     // Crear el renderizador
     var renderer = new THREE.WebGLRenderer();
@@ -43,9 +44,9 @@
     directionalLight.position.set(1, 1, 1).normalize();
     scene.add(directionalLight);
 
-    // Añadir OrbitControls para interactuar con el modelo
-    var controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.update();
+    // Desactivar temporalmente OrbitControls
+    // var controls = new THREE.OrbitControls(camera, renderer.domElement);
+    // controls.update();
 
     // Cargar el archivo MTL y OBJ
     var mtlLoader = new THREE.MTLLoader();
@@ -65,7 +66,6 @@
     // Función de animación
     function animate() {
       requestAnimationFrame(animate);
-      controls.update();  // Actualiza los controles para interactuar con el modelo
       renderer.render(scene, camera);  // Renderiza la escena
     }
     animate();
