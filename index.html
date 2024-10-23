@@ -21,7 +21,7 @@
         }
         .image-section {
             flex: 1;
-            padding: 20px;
+            padding: 30px;
             border-right: 1px solid #ddd;
             display: flex;
             justify-content: left;
@@ -29,8 +29,8 @@
         }
 
         #product-viewer {
-          width: 300px;  /* Ancho pequeño */
-          height: 300px; /* Alto pequeño */
+          width: 400px;  /* Ancho pequeño */
+          height: 400px; /* Alto pequeño */
           background-color: #ffffff;
         }
 
@@ -196,7 +196,7 @@
       objLoader.setMaterials(materials);
       objLoader.load('eyeball.obj', function (object) {
         object.position.set(0, 0, 0);  // Centrar el modelo
-        object.scale.set(3, 3, 3);  // Ajustar la escala del modelo
+        object.scale.set(6, 6, 6);  // Ajustar la escala del modelo
         scene.add(object);
       });
     });
