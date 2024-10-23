@@ -47,7 +47,7 @@
       objLoader.setMaterials(materials);
       objLoader.load('eyeball.obj', function (object) {
         object.position.set(0, 0, 0);  // Centrar el modelo
-        object.scale.set(0.1, 0.1, 0.1);  // Ajustar la escala del modelo si es necesario
+      object.scale.set(1, 1, 1);  // Aumenta la escala (ajusta según sea necesario)
         scene.add(object);
       });
     });
